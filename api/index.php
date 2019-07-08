@@ -1,12 +1,5 @@
 <html>
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-5780765835835702",
-    enable_page_level_ads: true
-  });
-</script>
 <meta name="google-site-verification" content="uAZbHb5pZhGA_tRSjqFRELge6ozYhEhn6w9SkXeTIpA" />
 <meta property="og:url" content="https://correctjp.work" /> 
 <meta property="og:title" content="怪レぃ日本語ジェネレーター" /> 
@@ -18,15 +11,6 @@
 
 <meta property="fb:app_id" content="AppID" />
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143416642-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-143416642-1');
-</script>
 <link rel="stylesheet" href="main.css">
 <title>怪レぃ日本語ジェネレーター</title>
 </head>
@@ -56,13 +40,11 @@ echo $output;
 </div>
 <script>
         function Clipboard() {
-            // コピー対象をJavaScript上で変数として定義する
-            var copyTarget = document.getElementById("copy");
-            // コピー対象のテキストを選択する
+          var copyTarget = document.getElementById("copy");
             copyTarget.select();
-            // 選択しているテキストをクリップボードにコピーする
+          
             document.execCommand("Copy");
-            // コピーをお知らせする
+       
             alert("コピーできました！ : " + copyTarget.value);
         }
 </script>
