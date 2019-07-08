@@ -34,7 +34,7 @@ echo $output;
 </form>
 <btn>
 <button class="cp" Onclick="Clipboard()">コピー</button>
-<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="<?php echo mb_strimwidth("$output", 0, 239, "…", 'UTF-8'); ?>" data-hashtags="怪レい日本語Web" data-show-count="false">Tweet</a><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="<?php echo htmlspecialchars(mb_strimwidth("$output", 0, 239, "…", 'UTF-8'), ENT_QUOTES, "UTF-8"); ?>" data-hashtags="怪レい日本語Web" data-show-count="false">Tweet</a><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </btn>
 </div>
 <script>
