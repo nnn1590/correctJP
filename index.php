@@ -10,6 +10,7 @@
 
 <meta property="fb:app_id" content="AppID" />
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
 <link rel="stylesheet" href="main.css">
 <title>怪レぃ日本語ジェネレーター</title>
 </head>
@@ -34,7 +35,26 @@ echo $output;
 </form>
 <btn>
 <button class="cp" Onclick="Clipboard()">コピー</button>
-<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="<?php echo htmlspecialchars(mb_strimwidth("$output", 0, 239, "…", 'UTF-8'), ENT_QUOTES, "UTF-8"); ?>" data-hashtags="怪レい日本語Web" data-show-count="false">Tweet</a><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<noscript>
+   <a id="twitter-share-button-noscript" href='https://twitter.com/intent/tweet?hashtags=%E6%80%AA%E3%83%AC%E3%81%84%E6%97%A5%E6%9C%AC%E8%AA%9EWeb&original_referer=<?php echo urlencode((empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);?>&ref_src=twsrc%5Etfw&text=<?php echo htmlspecialchars($output, ENT_QUOTES, "UTF-8");?>&tw_p=tweetbutton&url=<?php echo urlencode((empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);?>'>Tweet</a>
+   <style>.twitter-share-button { display:none; }</style>
+</noscript>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" id="twitter-share-button" data-text="" data-hashtags="怪レい日本語Web" data-show-count="false">Tweet</a>
+<script type="text/javascript" src="twitter-text-3.0.1.min.js"></script>
+<script type="text/javascript">
+var phpOutput = <?php echo json_encode("$output");?>;
+var tweetText = (phpOutput + " <?php echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];?> #怪レい日本語Web");
+if ((twttr.txt.parseTweet(tweetText).weightedLength) > 280) {
+  while ((twttr.txt.parseTweet(tweetText).weightedLength) > 278) {
+    phpOutput = phpOutput.slice(0, -1);
+    tweetText = (phpOutput + " <?php echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];?> #怪レい日本語Web");
+  }
+  phpOutput = phpOutput + "…";
+}
+shareButton = document.getElementById("twitter-share-button");
+shareButton.setAttribute("data-text", phpOutput);
+</script>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </btn>
 </div>
 <script>
