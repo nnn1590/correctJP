@@ -41,7 +41,7 @@
 ?></textarea>
 		<br>
 		<span class="txt">変換結果を</span><button id="copybutton" class="cp" Onclick="Clipboard()">コピー</button>
-		<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count=true data-size="large" data-text="<?php echo htmlspecialchars("$output", ENT_QUOTES, "UTF-8"); ?>" data-hashtags="怪レい日本語Web" data-show-count="false">Tweet</a><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count=true data-size="large" data-text="<?php if ($_POST["main"] != "") echo htmlspecialchars("$output", ENT_QUOTES, "UTF-8"); ?>" data-hashtags="怪レい日本語Web" data-show-count="false">Tweet</a><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		<div class="formain">
 			<form method="POST" class="sender">
 				<input type="text" placeholder="ここに正レぃ日本語を入力ずゑ。"name="main" class="sendtxt">
