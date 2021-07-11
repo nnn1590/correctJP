@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta property="og:url" content="https://correctjp.work" /> 
-		<meta property="og:title" content="怪レぃ日本語ジェネレーター" /> 
-		<meta property="og:image" content="https://correctjp.work/ogp.png" /> 
-		<meta property="og:description" content="ここては怪レぃ日本語を作ゑこどがてきゑ！贵樣も使う(レなちぃ)。" /> 
+		<meta property="og:url" content="https://nnn1590.org/correctJP" />
+		<meta property="og:title" content="怪レぃ日本語ジェネレーター" />
+		<meta property="og:image" content="https://nnn1590.org/correctJP/ogp.png" />
+		<meta property="og:description" content="ここては怪レぃ日本語を作ゑこどがてきゑ！贵樣も使う(レなちぃ)。" />
 
-		<meta name="twitter:card" content="summary_large_image" /> 
-		<meta name="twitter:site" content="@orange_linux2" /> 
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@nnn1590">
+		<meta name="twitter:creator" content="@0_a_e" />
 
 		<meta property="fb:app_id" content="AppID" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
