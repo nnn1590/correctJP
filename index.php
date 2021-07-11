@@ -19,14 +19,16 @@
 		<script>
 			function Clipboard() {
 				var copyTarget = document.getElementById("copy");
+				var copyButton = document.getElementById("copybutton");
 				copyTarget.select();
 				document.execCommand("Copy");
-				alert("コピーできました！ : " + copyTarget.value);
+				copyButton.innerText = "コピーしました！";
+				setTimeout(function(){copyButton.innerText = "コピー";}, 3000);
 			}
 		</script>
 		<h1>怪レぃ日本語ジェネレーター</h1>
 		<h2>ここては怪レぃ日本語を作ゑこどがてきゑ！贵樣も使う(レなちぃ)。</h2>
-		<textarea class="copyform" id="copy">
+		<textarea class="copyform" id="copy" readonly>
 <?php
 	$output = "ここに結果が表示ちねまず。";
 	$inpt = $_POST["main"];
@@ -38,8 +40,8 @@
 	echo htmlspecialchars($output);
 ?></textarea>
 		<br>
-		<span class="txt">変換結果を</span><button class="cp" Onclick="Clipboard()">コピー</button>
-		<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="<?php echo htmlspecialchars("$output", ENT_QUOTES, "UTF-8"); ?>" data-hashtags="怪レい日本語Web" data-show-count="false">Tweet</a><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<span class="txt">変換結果を</span><button id="copybutton" class="cp" Onclick="Clipboard()">コピー</button>
+		<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count=true data-size="large" data-text="<?php echo htmlspecialchars("$output", ENT_QUOTES, "UTF-8"); ?>" data-hashtags="怪レい日本語Web" data-show-count="false">Tweet</a><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		<div class="formain">
 			<form method="POST" class="sender">
 				<input type="text" placeholder="ここに正レぃ日本語を入力ずゑ。"name="main" class="sendtxt">
