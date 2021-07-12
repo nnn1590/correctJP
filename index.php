@@ -18,13 +18,15 @@
 	</head>
 	<body>
 		<script>
+			var copyButtonTimeout;
 			function Clipboard() {
 				var copyTarget = document.getElementById("copy");
 				var copyButton = document.getElementById("copybutton");
 				copyTarget.select();
 				document.execCommand("Copy");
 				copyButton.innerText = "コピーしました！";
-				setTimeout(function(){copyButton.innerText = "コピー";}, 3000);
+				clearTimeout(copyButtonTimeout);
+				copyButtonTimeout = setTimeout(function(){copyButton.innerText = "コピー";}, 3000);
 			}
 		</script>
 		<h1>怪レぃ日本語ジェネレーター</h1>
