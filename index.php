@@ -24,7 +24,11 @@
 				var copyButton = document.getElementById("copybutton");
 				copyTarget.select();
 				document.execCommand("Copy");
-				copyButton.innerText = "コピーしました！";
+				if (copyButton.innerText == "コピーしました！") {
+					copyButton.innerText = "コピーレまレた！";
+				} else {
+					copyButton.innerText = "コピーしました！";
+				}
 				clearTimeout(copyButtonTimeout);
 				copyButtonTimeout = setTimeout(function(){copyButton.innerText = "コピー";}, 3000);
 			}
