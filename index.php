@@ -13,6 +13,7 @@
 		<meta property="fb:app_id" content="AppID" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="stylesheet" href="main.css">
+		<link rel="shortcut icon" href="favicon.ico">
 		<title>怪レぃ日本語ジェネレーター</title>
 	</head>
 	<body>
