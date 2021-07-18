@@ -97,3 +97,27 @@ button:active, .sendsubmit:active {
 .txt {
 	font-size: 40px;
 }
+
+.sendbuttontext-long {
+	display: none;
+}
+.sendbuttontext-short {
+	display: inline-block;
+}
+
+@media screen and (min-width: 300px) {
+	.sendbuttontext {
+		white-space: nowrap;
+		font-size: 20px;
+	}
+}
+@media screen and (min-width: 800px) {
+	.sendbuttontext-short {
+		display: none;
+	}
+	.sendbuttontext-long {
+		width: 100%;
+		display: inline-block;
+		white-space: nowrap;
+	}
+}

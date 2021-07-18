@@ -52,7 +52,7 @@
 		<div class="formain">
 			<form method="POST" class="sender">
 				<input type="text" placeholder="ここに正レぃ日本語を入力ずゑ。"name="main" class="sendtxt">
-				<input type="submit" class="sendsubmit" value="怪レぃ日本語にずゑ">
+				<button type="submit" class="sendsubmit" value="怪レぃ日本語にずゑ"><span class="sendbuttontext sendbuttontext-short">変換</span><span class="sendbuttontext sendbuttontext-long">怪レぃ日本語にずゑ</span></button>
 			</form>
 		</div>
 		<div class="paddingforform"></div>
