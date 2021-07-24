@@ -8,7 +8,9 @@
 
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@nnn1590">
+		<meta name="twitter:site:id" content="829183176727810049">
 		<meta name="twitter:creator" content="@0_a_e" />
+		<meta name="twitter:creator:id" content="1188833290947444737" />
 
 		<meta property="fb:app_id" content="AppID" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
